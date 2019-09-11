@@ -25,17 +25,26 @@
                             
                     }
                  */
-                for ($i=0; $i < 101; $i++) {
+                /*Affiche tous les chiffres de 0 à 100 et affiche le nombre de fois ou le nombre est présent dans le tableau */
+               for ($i=0; $i < 101; $i++) {
                     foreach ($tab1 as $key => $valeur) {
                         if ($i == $valeur) {
                             $y++;
                         }
                         
                     } 
-                    ?><p><?php echo "la valeur : ".$i. " est présente : ".$y." fois "; ?></p><?php
+                     $z= "la valeur : ".$i. " est présente : ".$y." fois ";
+                        if ($y > 1) {
+                            ?><p style="color:red";><?php echo $z; ?></p><?php
+                        }
+                        else {
+                            ?><p><?php echo $z; ?></p><?php
+                        }
                     $y = 0;
                 }
 
-        ?>
+        ?> 
+        
+
     </body>
     </html>
